@@ -1,0 +1,47 @@
+name: E2E AI CI
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build and start services
+        run: |
+          docker compose up --build -d
+
+      - name: Wait for python-ai to be ready
+        run: |
+          echo "Waiting for http://localhost:8000 to respond..."
+          for i in {1..60}; do
+            if curl -sS http://localhost:8000 >/dev/null 2>&1; then
+              echo "python-ai is up"; break
+            fi
+            sleep 2
+          done
+
+      - name: Install Python deps for runner
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Run CI wrapper
+        run: |
+          python scripts/run_e2e_ai_ci.py --runs 3
+
+      - name: Upload logs
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-ai-logs
+          path: logs/e2e_ai_runs
+
+      - name: Tear down services
+        if: always()
+        run: |
+          docker compose down -v

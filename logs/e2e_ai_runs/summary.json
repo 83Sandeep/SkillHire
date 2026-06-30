@@ -1,0 +1,30 @@
+{
+  "runs": [
+    {
+      "run": 1,
+      "timestamp": "20260630T095612",
+      "returncode": 0,
+      "stdout": "C:\\Users\\sande\\OneDrive\\Documents\\SkillHire\\logs\\e2e_ai_runs\\run_1_20260630T095612\\stdout.log",
+      "stderr": "C:\\Users\\sande\\OneDrive\\Documents\\SkillHire\\logs\\e2e_ai_runs\\run_1_20260630T095612\\stderr.log",
+      "dir": "C:\\Users\\sande\\OneDrive\\Documents\\SkillHire\\logs\\e2e_ai_runs\\run_1_20260630T095612"
+    },
+    {
+      "run": 2,
+      "timestamp": "20260630T095614",
+      "returncode": 0,
+      "stdout": "C:\\Users\\sande\\OneDrive\\Documents\\SkillHire\\logs\\e2e_ai_runs\\run_2_20260630T095614\\stdout.log",
+      "stderr": "C:\\Users\\sande\\OneDrive\\Documents\\SkillHire\\logs\\e2e_ai_runs\\run_2_20260630T095614\\stderr.log",
+      "dir": "C:\\Users\\sande\\OneDrive\\Documents\\SkillHire\\logs\\e2e_ai_runs\\run_2_20260630T095614"
+    },
+    {
+      "run": 3,
+      "timestamp": "20260630T095630",
+      "returncode": 0,
+      "stdout": "C:\\Users\\sande\\OneDrive\\Documents\\SkillHire\\logs\\e2e_ai_runs\\run_3_20260630T095630\\stdout.log",
+      "stderr": "C:\\Users\\sande\\OneDrive\\Documents\\SkillHire\\logs\\e2e_ai_runs\\run_3_20260630T095630\\stderr.log",
+      "dir": "C:\\Users\\sande\\OneDrive\\Documents\\SkillHire\\logs\\e2e_ai_runs\\run_3_20260630T095630"
+    }
+  ],
+  "started_at": "2026-06-30T09:56:12.588981",
+  "finished_at": "2026-06-30T09:56:32.830570"
+}
